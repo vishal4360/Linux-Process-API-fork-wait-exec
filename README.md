@@ -76,28 +76,6 @@ int main() {
 
 ## C Program to create new process using Linux API system calls fork() and exit()
 
-
-
-
-
-
-
-
-
-
-
-
-
-##OUTPUT
-
-
-
-
-
-
-
-
-## C Program to execute Linux system commands using Linux API system calls exec() family
 ```c
 
 #include <stdio.h>
@@ -152,6 +130,29 @@ int main() {
 
 
 
+## OUTPUT
+
+![wait-check](./img/wait-exit.png)
+
+
+
+
+
+
+
+
+## C Program to execute Linux system commands using Linux API system calls exec() family
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -169,7 +170,7 @@ int main() {
 
 
 ## OUTPUT:
-![wait-check](./img/wait-exit.png)
+
 
 
 

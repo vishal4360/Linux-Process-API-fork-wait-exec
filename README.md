@@ -1,5 +1,5 @@
-# NAME : ELAIYAVAN K
-# REG NO: 212224100015
+# NAME : Vishal c
+# REG NO: 212224100062
 
 # Linux-Process-API-fork-wait-exec-
 Ex02-Linux Process API-fork(), wait(), exec()

@@ -1,3 +1,6 @@
+# NAME : VISHAL C
+# REG NO: 212224100062
+
 # Linux-Process-API-fork-wait-exec-
 Ex02-Linux Process API-fork(), wait(), exec()
 # Ex02-OS-Linux-Process API - fork(), wait(), exec()
@@ -25,8 +28,7 @@ Test the C Program for the desired output.
 
 ## C Program to print process ID and parent Process ID using Linux API system calls
 
-```c
-//C Program to create new process using Linux API system calls fork() and exit()
+~~~c
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -42,42 +44,59 @@ int main() {
         printf("I am parent, my PID is %d\n", getpid()); 
         wait(NULL); 
     }
-}
+
+~~~
+##OUTPUT
+
+![image](https://github.com/user-attachments/assets/d6e253ff-9ed4-4b69-85fb-7f6fba3d6a37)
+
+![image](https://github.com/user-attachments/assets/c699b819-fba8-4cad-8b05-d0f719fa99cf)
+
+![image](https://github.com/user-attachments/assets/bfa38d43-fb29-48a3-a5ed-4839c517c31b)
+
+### RESULT:
+Thus the program to implement the creation of a process using fork() API is written and verified using C programming.
+
+## C Program to create new process using Linux API system calls exec():
+~~~c
+#include <stdlib.h>
+#include <sys/wait.h>
+#include <sys/types.h>
+int main()
+{       int status;
+        printf("Running ps with execlp\n");
+        execl("ps", "ps", "ax", NULL);
+        wait(&status);
+        if (WIFEXITED(status))
+                printf("child exited with status of %d\n", WEXITSTATUS(status));
+        else
+                puts("child did not exit successfully\n");
+        printf("Done.\n");
+printf("Running ps with execlp. Now with path specified\n");
+        execl("/bin/ps", "ps", "ax", NULL);
+        wait(&status);
+        if (WIFEXITED(status))
+                printf("child exited with status of %d\n", WEXITSTATUS(status));
+        else
+                puts("child did not exit successfully\n");
+        printf("Done.\n");
+        exit(0);}
+
+~~~
+##OUTPUT
 
 
-```
+![image](https://github.com/user-attachments/assets/dcda70cf-ef29-49c5-9a90-3746c936b86d)
+
+![image](https://github.com/user-attachments/assets/d42260aa-8a89-45a0-9ea8-1dd076eb9b4f)
+
+### RESULT:
+Thus the program to implement the creation of a process using exec() API is written and verified using C programming.
 
 
+## C Program to execute Linux system commands using Linux API system calls exit() , wait():
 
-
-
-
-
-
-
-
-
-
-
-
-## OUTPUT
-
-![ex02forkcheck](./img/ex02-forkcheck.png)
-
-
-
-
-
-
-
-
-
-
-
-## C Program to create new process using Linux API system calls fork() and exit()
-
-```c
-
+~~~c
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -119,79 +138,17 @@ int main() {
     return 0;
 }
 
-```
-
-
-
-
-
-
-
-
-
+~~~
 
 ## OUTPUT
 
-![wait-check](./img/wait-exit.png)
 
+![image](https://github.com/user-attachments/assets/ba3b10f6-009b-43df-85d5-2e21c83505b8)
 
+![image](https://github.com/user-attachments/assets/97fe7275-a2ed-4089-8df4-cbca4a1d4358)
 
-
-
-
-
-
-## C Program to execute Linux system commands using Linux API system calls exec() family
-
-```c
-#include <stdlib.h>
-#include <sys/wait.h>
-#include <sys/types.h>
-int main()
-{       int status;
-        printf("Running ps with execlp\n");
-        execl("ps", "ps", "ax", NULL);
-        wait(&status);
-        if (WIFEXITED(status))
-                printf("child exited with status of %d\n", WEXITSTATUS(status));
-        else
-                puts("child did not exit successfully\n");
-        printf("Done.\n");
-printf("Running ps with execlp. Now with path specified\n");
-        execl("/bin/ps", "ps", "ax", NULL);
-        wait(&status);
-        if (WIFEXITED(status))
-                printf("child exited with status of %d\n", WEXITSTATUS(status));
-        else
-                puts("child did not exit successfully\n");
-        printf("Done.\n");
-        exit(0);}
-```
-
-
-
-
-
-
-
-## OUTPUT:
-![exec](./img/exec.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### RESULT:
+Thus the program to implement the creation of a process using exit() , wait() API is written and verified using C programming.
 
 
 # RESULT:
